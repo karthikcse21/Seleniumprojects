@@ -15,7 +15,7 @@ import io.cucumber.java.en.When;
 
 public class OpenGoogleDefinitions {
 	
-	public WebDriver driver = new ChromeDriver();
+	static WebDriver driver = new ChromeDriver();
 	
 	@Given("user is entering instagram URL")
 	public void user_is_entering_instagram_url() throws InterruptedException {
