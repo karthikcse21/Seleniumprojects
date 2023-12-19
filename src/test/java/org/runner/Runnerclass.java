@@ -13,7 +13,7 @@ import io.cucumber.junit.CucumberOptions;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="features",glue= "org.stepdefinition", monochrome=true, dryRun =true, tags ="@logout and @smoke and @invalid and @Homepage and @smoke and @valid")
+@CucumberOptions(features="features",glue= "org.stepdefinition", monochrome=true, dryRun =false, tags =" @smoke")
 
 
 public class Runnerclass {

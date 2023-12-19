@@ -22,29 +22,36 @@ public class OpenGoogleDefinitions {
 		
 		
 		
-	    driver.get("https://www.instagram.com/");
+	    driver.get("https://www.github.com/");
 	    Thread.sleep(10000);
 	}
 
 	@When("user is typing correct username and password")
 	public void user_is_typing_correct_username_and_password() throws InterruptedException {
 	    // Write code here that turns the phrase above into concrete actions
-		driver.findElement(By.xpath("//input[@name='username']")).sendKeys("i.am.karthik92");
+		
+		
+		driver.findElement(By.xpath("//a[@class='HeaderMenu-link HeaderMenu-link--sign-in flex-shrink-0 no-underline d-block d-lg-inline-block border border-lg-0 rounded rounded-lg-0 p-2 p-lg-0']")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//input[@name='login']")).sendKeys("karthikcse21@gmail.com");
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("");
+		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("jamhub@1234");
 		Thread.sleep(2000);
 		
 	}
 
 	@Then("the user should able to login successfully")
 	public void the_user_should_able_to_login_successfully() throws InterruptedException {
-		driver.findElement(By.xpath("//*[text()='Log in']")).click();
-		Thread.sleep(3000);
-		driver.close();
+		driver.findElement(By.xpath("//input[@name='commit']")).click();
+		Thread.sleep(5000);
+		//driver.close();
 	}
 	@Given("user click logout buttton")
 	public void user_click_logout_buttton() {
 	    // Write code here that turns the phrase above into concrete actions
+		//*[@class='btn-primary btn btn-block']
+		driver.findElement(By.xpath("//*[@class='btn-primary btn btn-block']")).click();
+		System.out.println("Test1");
 		
 	    throw new io.cucumber.java.PendingException();
 	}
